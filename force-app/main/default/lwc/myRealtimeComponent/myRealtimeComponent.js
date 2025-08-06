@@ -41,7 +41,7 @@ export default class MyRealtimeComponent extends LightningElement {
     initializeSocketIo() {
         // Replace with the URL of your intermediary Socket.IO server
         // IMPORTANT: This URL must be added to CSP Trusted Sites in Salesforce Setup
-        const serverUrl = 'https://your-intermediary-socketio-server.com'; 
+        const serverUrl = 'https://grpc-intermediary-service-284810888760.us-central1.run.app'; 
 
         this.socket = io(serverUrl);
 
