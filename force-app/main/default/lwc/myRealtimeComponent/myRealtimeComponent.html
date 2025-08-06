@@ -1,0 +1,11 @@
+<!-- myRealtimeComponent.html -->
+<template>
+    <lightning-card title="Real-time Calculator Results">
+        <div class="slds-p-around_medium">
+            <template for:each={messages} for:item="msg">
+                <p key={msg}>{msg}</p>
+            </template>
+            <lightning-button label="Send Test Message" onclick={sendMessage} class="slds-m-top_small"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

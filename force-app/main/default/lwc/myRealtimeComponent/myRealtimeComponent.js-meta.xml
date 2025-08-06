@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion> <!-- Use your current API version -->
+    <isExposed>true</isExposed>
+    <masterLabel>My Real-time Calculator</masterLabel>
+    <targets>
+        <!-- This target makes the component available on record pages -->
+        <target>lightning__RecordPage</target>
+        <!-- Add this target for the Utility Bar -->
+        <target>lightning__UtilityBar</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="recordId" type="String" label="Record Id" description="Automatically populated with the current record's ID."/>
+        </targetConfig>
+        <!-- You can define properties specific to the Utility Bar if needed -->
+        <targetConfig targets="lightning__UtilityBar">
+            <!-- Example: A property to set a default title for the utility item -->
+            <property name="utilityTitle" type="String" label="Utility Item Title" default="Calculator"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
